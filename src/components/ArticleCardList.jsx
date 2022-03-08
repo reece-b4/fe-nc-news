@@ -1,22 +1,28 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ArticleCard from "./ArticleCard"
-import  { getArticles, api } from "../api"
+import  { getArticles, api, getArticlesByTopic } from "../api"
 
-
-export default ({setArticlesCount, pageNumber}) => {
+export default () => {
     const [articlesList, setArticlesList] = useState([])
-    const [articlesSlice, setArticlesSlice] = useState([])
     const [loading, setLoading] =useState(true)
-
+    const {topic} = useParams()
+    
     useEffect(()=> {
+        setLoading(true)
+        if (topic !== undefined) {
+        getArticlesByTopic(topic).then((articles)=>{
+            setArticlesList(articles)
+            setLoading(false)
+        })
+    } else {
         getArticles().then((articles)=>{
             setArticlesList(articles)
-            setArticlesCount(articles.length)
-            // setArticlesSlice(articlesList.slice((pageNumber - 1), (pageNumber + 8)))
             setLoading(false)
-            // add pagination later, put setArticlesSlice in another useEffect of if statement outside ofn this one?
         })
-    }, [])
+    }
+    }, [topic])
+
     if (loading === true) {
         return <p>Loading...</p>
     } else {
