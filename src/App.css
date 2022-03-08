@@ -42,3 +42,9 @@
   ul {
     list-style-type: none;
   }
+
+  .navButtons {
+    background-color: rgb(85, 129, 85);
+    margin: 5px;
+    padding:5px;
+  }
