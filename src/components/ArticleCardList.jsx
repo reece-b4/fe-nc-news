@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ArticleCard from "./ArticleCard"
-import  { getArticles, getArticlesByTopic } from "../api"
+import  { getArticles, api, getArticlesByTopic } from "../api"
 
 export default () => {
     const [articlesList, setArticlesList] = useState([])
     const [loading, setLoading] =useState(true)
-    const {paramsTopic} = useParams()
+    const {topic} = useParams()
     
     useEffect(()=> {
         setLoading(true)
-        if (paramsTopic !== undefined) {
-        getArticlesByTopic(paramsTopic).then((articles)=>{
+        if (topic !== undefined) {
+        getArticlesByTopic(topic).then((articles)=>{
             setArticlesList(articles)
             setLoading(false)
         })
@@ -21,7 +21,7 @@ export default () => {
             setLoading(false)
         })
     }
-    }, [paramsTopic])
+    }, [topic])
 
     if (loading === true) {
         return <p>Loading...</p>
