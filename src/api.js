@@ -20,3 +20,10 @@ export function getArticlesByTopic (topic) {
         return articles
     })
 }
+
+export function getArticleById (id) {
+    return api.get(`articles/${id}`)
+    .then(({data: {article}})=>{
+        return article
+    })
+}

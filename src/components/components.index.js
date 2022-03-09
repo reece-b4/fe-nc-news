@@ -8,6 +8,7 @@ import DropdownButtons from './DropdownButtons';
 import Dropdown from './Dropdown';
 import ArticleCardList from './ArticleCardList';
 import ArticleCard from './ArticleCard';
+import ArticlePage from './ArticlePage';
 
 
-export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, DropdownButtons, Dropdown, ArticleCardList, ArticleCard};
+export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, DropdownButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage};

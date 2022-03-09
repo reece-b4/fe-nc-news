@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ArticleCard from "./ArticleCard"
-import  { getArticles, api, getArticlesByTopic } from "../api"
+import  { getArticles, getArticlesByTopic } from "../api"
 
 export default () => {
     const [articlesList, setArticlesList] = useState([])
     const [loading, setLoading] =useState(true)
-    const {topic} = useParams()
+    const {paramsTopic} = useParams()
     
     useEffect(()=> {
         setLoading(true)
-        if (topic !== undefined) {
-        getArticlesByTopic(topic).then((articles)=>{
+        if (paramsTopic !== undefined) {
+        getArticlesByTopic(paramsTopic).then((articles)=>{
             setArticlesList(articles)
             setLoading(false)
         })
@@ -21,7 +21,7 @@ export default () => {
             setLoading(false)
         })
     }
-    }, [topic])
+    }, [paramsTopic])
 
     if (loading === true) {
         return <p>Loading...</p>
@@ -29,9 +29,9 @@ export default () => {
     return (
         <>
         <ul className='articleList'>
-        {articlesList.map(({article_id, title, votes, comment_count})=>{
+        {articlesList.map(({article_id, title, topic, votes, comment_count})=>{
          
-            return <ArticleCard key={article_id} article_id={article_id} title={title} votes={votes} comment_count={comment_count}/>
+            return <ArticleCard key={article_id} article_id={article_id} title={title} topic={topic} votes={votes} comment_count={comment_count}/>
         })}
         </ul>
 </>

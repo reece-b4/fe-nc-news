@@ -48,3 +48,23 @@
     margin: 5px;
     padding:5px;
   }
+
+  article {
+    border: solid;
+  }
+
+  .body {
+    text-align: left;
+  }
+
+  .title {
+    font-size: 18;
+  }
+
+.author {
+  text-align: left;
+}
+
+  .topic {
+    text-align: left;
+  }
