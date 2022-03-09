@@ -1,11 +1,11 @@
+import { Link } from "react-router-dom"
 
-
-export default ({title, votes, comment_count}) => {
+export default ({article_id, title, topic, votes, comment_count}) => {
     return (
-    <li className='articleCard'>
+    <Link to={`/topic/${topic}/article/${article_id}`} className='articleCard'>
         <p>{title}</p>
         <p>votes: {votes} comments: {comment_count}</p>
-    </li>
+    </Link>
     )
 }
 

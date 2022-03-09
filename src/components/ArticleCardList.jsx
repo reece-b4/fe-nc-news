@@ -29,9 +29,9 @@ export default () => {
     return (
         <>
         <ul className='articleList'>
-        {articlesList.map(({article_id, title, votes, comment_count})=>{
+        {articlesList.map(({article_id, title, topic, votes, comment_count})=>{
          
-            return <ArticleCard key={article_id} article_id={article_id} title={title} votes={votes} comment_count={comment_count}/>
+            return <ArticleCard key={article_id} article_id={article_id} title={title} topic={topic} votes={votes} comment_count={comment_count}/>
         })}
         </ul>
 </>
