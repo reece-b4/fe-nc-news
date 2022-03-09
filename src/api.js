@@ -27,3 +27,7 @@ export function getArticleById (id) {
         return article
     })
 }
+
+export function patchVotesById (id, votecrement) {
+    return api.patch(`articles/${id}`, {inc_votes:votecrement})
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams} from "react-router-dom"
 import { getArticleById } from "../api"
+import {Votes} from './components.index'
 
 export default () => {
     const [article, setArticle] = useState({})
@@ -25,7 +26,8 @@ export default () => {
     <p className='author'>{author}</p>
     <p className='topic'>{topic}</p>
     <p className='body'>{body}</p>
-    <p>votes: {votes} <button>-</button> <button>+</button>  comments: {comment_count} {created_at}</p>
+    <Votes initialVotes={votes} article_id={article_id}/>
+    <p>comments: {comment_count} {created_at}</p>
     </article>
     )
     }
