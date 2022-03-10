@@ -10,6 +10,9 @@ import ArticleCardList from './ArticleCardList';
 import ArticleCard from './ArticleCard';
 import ArticlePage from './ArticlePage';
 import Votes from './Votes';
+import CommentsList from './CommentsList';
+import Comment from './Comment';
+import ExpandingWrapper from './ExpandingWrapper';
 
 
-export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, DropdownButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes};
+export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, DropdownButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper};

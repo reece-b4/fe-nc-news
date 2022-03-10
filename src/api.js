@@ -31,3 +31,10 @@ export function getArticleById (id) {
 export function patchVotesById (id, votecrement) {
     return api.patch(`articles/${id}`, {inc_votes:votecrement})
 }
+
+export function getCommentsById (id) {
+    return api.get(`articles/${id}/comments`)
+    .then(({data: {comments}})=>{
+        return comments
+    })
+}

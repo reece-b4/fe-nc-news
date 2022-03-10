@@ -23,19 +23,12 @@
   display: flex;
   flex-direction:row;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  /* align-content: center; */
-  /* align-items: center; */
   }
 
   .articleCard {
     margin: 10px;
     flex: 400px;
-    /* align-self: auto; */
-    /* display:flex; */
     width:300px;
-    /* margin: 10px; */
-    /* font-size: 18px; */
     border-style: dashed;
   }
 
@@ -70,3 +63,19 @@
   .topic {
     text-align: left;
   }
+
+  .comment {
+    border:solid;
+    margin: 5px;
+    padding: 5px;
+  }
+
+.votes {
+    font-size: 1rem;
+  }
+@media screen and (min-width: 600px) {
+    .votes {
+      font-size: 1rem;
+    }
+  }
+  
