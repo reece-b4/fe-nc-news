@@ -2,16 +2,19 @@ import { useEffect, useState } from "react"
 import { getCommentsById } from "../api"
 import {Comment} from './components.index'
 
-
-export default ({article_id}) => {
-const [commentsList, setCommentsList] = useState([])
+export default ({article_id, setCommentsList, commentsList}) => {
+    const [loading, setLoading] = useState(true)
 
 useEffect(()=>{
+    setLoading(true)
     getCommentsById(article_id).then((comments)=>{
         setCommentsList(comments)
+        setLoading(false)
     })
 }, [])
-
+if (loading === true) {
+    return <p>Loading...</p>
+} else {
     return (
         <>
         <p>Comments</p>
@@ -26,4 +29,5 @@ useEffect(()=>{
         }</ul>
         </>
     )
+}
 }
