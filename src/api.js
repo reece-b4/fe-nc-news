@@ -38,3 +38,10 @@ export function getCommentsById (id) {
         return comments
     })
 }
+
+export function postCommentByArticleId (username, id, comment) {
+    return api.post(`articles/${id}/comments`, {username: username, body: comment})
+    .then(({data:{comment}})=>{
+return comment;
+    })
+}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { patchVotesById } from "../api"
 
 export default ({initialVotes, article_id}) => {
