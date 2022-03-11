@@ -1,10 +1,11 @@
-import {Votes} from './components.index'
-import {ExpandingWrapper} from './components.index'
+import {ExpandingWrapper, DeleteCommentButton} from './components.index'
 
-export default ({author, body, created_at, votes, article_id}) => {
+
+export default ({author, body, created_at, comment_id, commentDeleted, setCommentDeleted, votes, article_id}) => {
     return (
     <>
     <p>{body}</p>
+    <DeleteCommentButton author={author} comment_id={comment_id} commentDeleted setCommentDeleted={setCommentDeleted}/>
     <ExpandingWrapper>
         <div>
     {/* <Votes initialVotes={votes} article_id={article_id}/> */}

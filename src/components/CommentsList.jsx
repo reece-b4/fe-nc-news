@@ -4,6 +4,7 @@ import {Comment} from './components.index'
 
 export default ({article_id, setCommentsList, commentsList}) => {
     const [loading, setLoading] = useState(true)
+    const [commentDeleted, setCommentDeleted] = useState(false)
 
 useEffect(()=>{
     setLoading(true)
@@ -11,7 +12,7 @@ useEffect(()=>{
         setCommentsList(comments)
         setLoading(false)
     })
-}, [])
+}, [commentDeleted])
 if (loading === true) {
     return <p>Loading...</p>
 } else {
@@ -22,7 +23,7 @@ if (loading === true) {
             commentsList.map(({author, body, created_at, votes, comment_id})=>{
                 return (
                     <li key={comment_id} className='comment'>
-                    <Comment author={author} body={body} created_at={created_at} votes={votes} />
+                    <Comment author={author} body={body} created_at={created_at} votes={votes} comment_id={comment_id} commentDeleted={commentDeleted} setCommentDeleted={setCommentDeleted}/>
                     </li>
                 )
             })
