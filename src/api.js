@@ -6,16 +6,9 @@ const api = axios.create({baseURL:'https://reece-ncnews.herokuapp.com/api'})
 
 
 
-export function getArticles () {
-    return api.get('articles')
-    .then(({data: {articles}})=>{
-        return articles
-    })
-}
-
-
-export function getArticlesByTopic (topic) {
-    return api.get(`articles?topic=${topic}`)
+export function getArticles (topic, sortBy, order) {
+    console.log(topic, sortBy, order, 'api')
+    return api.get('articles', {params: {topic, sortBy, order}})
     .then(({data: {articles}})=>{
         return articles
     })

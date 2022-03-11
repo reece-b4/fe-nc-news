@@ -6,7 +6,6 @@ export default () => {
         <section>
     <p>Navbar</p>
     <NavButtons />
-    <Dropdown />
 </section>
     )
 }
