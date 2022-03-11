@@ -1,27 +1,34 @@
 import { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import ArticleCard from "./ArticleCard"
+import {ArticleCard, Error} from "./components.index"
 import  { getArticles, api, getArticlesByTopic } from "../api"
 import Dropdown from "./Dropdown";
 
 export default () => {
     const [articlesList, setArticlesList] = useState([])
     const [loading, setLoading] =useState(true)
+    const [error, setError]= useState(null)
     const {topic} = useParams()
     const search = useLocation().search;
     const sortBy = new URLSearchParams(search).get('sortBy');
     const order = new URLSearchParams(search).get('order');
-    console.log(topic, sortBy, order, 'articlecardlist')
+
     
     useEffect(()=> {
         setLoading(true)
         getArticles(topic, sortBy, order).then((articles)=>{
             setArticlesList(articles)
             setLoading(false)
+        }).catch((err)=>{
+            setError({err})
         })
     
     }, [topic, sortBy, order])
 
+if (error) {
+    console.log(error)
+    // return <Error message={error} />
+} else {
     if (loading === true) {
         return <p>Loading...</p>
     } else {
@@ -36,4 +43,5 @@ export default () => {
 </>
     )
     }
+}
 }

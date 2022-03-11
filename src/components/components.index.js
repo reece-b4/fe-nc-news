@@ -15,6 +15,8 @@ import Comment from './Comment';
 import ExpandingWrapper from './ExpandingWrapper';
 import PostComment from './PostComment';
 import ArticlesDisplay from './ArticlesDisplay';
+import ErrorPage from './ErrorPage';
+import Error from './Error';
 
 
-export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, DropdownButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper, PostComment, ArticlesDisplay};
+export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, DropdownButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper, PostComment, ArticlesDisplay, ErrorPage, Error};
