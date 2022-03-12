@@ -15,11 +15,10 @@ export default () => {
         setLoading(true)
         getArticleById(article_id).then((article)=>{
             setArticle(article)
-            console.log(article, 'article use effect')
             setLoading(false)
         })
         .catch((err)=>{
-            if (err.response.status) {
+            if (err) {
                 setError('article not found')
             }
             setLoading(false)

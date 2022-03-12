@@ -1,4 +1,3 @@
-import Dropdown from "./Dropdown"
 import NavButtons from "./NavButtons"
 
 export default () => {
