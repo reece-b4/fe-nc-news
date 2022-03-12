@@ -1,10 +1,6 @@
 import axios from "axios"
 
-
-
 const api = axios.create({baseURL:'https://reece-ncnews.herokuapp.com/api'})
-
-
 
 export function getArticles (topic, sortBy, order) {
     return api.get('articles', {params: {topic, sortBy, order}})
@@ -36,4 +32,8 @@ export function postCommentByArticleId (username, id, comment) {
     .then(({data:{comment}})=>{
 return comment;
     })
+}
+
+export function deleteCommentById (commentId) {
+    return api.delete(`comments/${commentId}`)
 }

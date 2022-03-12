@@ -17,6 +17,8 @@ import PostComment from './PostComment';
 import ArticlesDisplay from './ArticlesDisplay';
 import ErrorPage from './ErrorPage';
 import Error from './Error';
+import DeleteCommentButton from './DeleteCommentButton';
+
+export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, DropdownButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper, PostComment, ArticlesDisplay, ErrorPage, Error, DeleteCommentButton};
 
 
-export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, DropdownButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper, PostComment, ArticlesDisplay, ErrorPage, Error};

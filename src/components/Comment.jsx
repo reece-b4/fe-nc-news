@@ -1,10 +1,17 @@
-import {Votes} from './components.index'
-import {ExpandingWrapper} from './components.index'
+import {ExpandingWrapper, DeleteCommentButton} from './components.index'
+import { UserContext } from "../contexts/User.Context"
+import { useContext } from 'react'
 
-export default ({author, body, created_at, votes, article_id}) => {
+
+export default ({author, body, created_at, comment_id, commentsList, setCommentsList, votes, article_id}) => {
+    const {user} = useContext(UserContext)
+
     return (
     <>
     <p>{body}</p>
+
+    {user === author ? <DeleteCommentButton author={author} comment_id={comment_id} commentsList={commentsList} setCommentsList={setCommentsList}/>:null }
+    
     <ExpandingWrapper>
         <div>
     {/* <Votes initialVotes={votes} article_id={article_id}/> */}

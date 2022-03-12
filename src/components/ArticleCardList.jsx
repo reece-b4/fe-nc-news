@@ -12,7 +12,6 @@ export default () => {
     const search = useLocation().search;
     const sortBy = new URLSearchParams(search).get('sortBy');
     const order = new URLSearchParams(search).get('order');
-
     
     useEffect(()=> {
         setError(null)
