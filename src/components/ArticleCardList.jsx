@@ -11,7 +11,6 @@ export default () => {
     const search = useLocation().search;
     const sortBy = new URLSearchParams(search).get('sortBy');
     const order = new URLSearchParams(search).get('order');
-    console.log(topic, sortBy, order, 'articlecardlist')
     
     useEffect(()=> {
         setLoading(true)

@@ -10,7 +10,6 @@ export default () => {
     const {topic} = useParams()
 
 useEffect(()=>{
-    console.log('useeffect')
     setSearchParams({sortBy: `${sortBy}`,
     order:`${order}`})
 },[sortBy, order, topic])

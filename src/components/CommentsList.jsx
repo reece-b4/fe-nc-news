@@ -22,7 +22,7 @@ if (loading === true) {
             commentsList.map(({author, body, created_at, votes, comment_id})=>{
                 return (
                     <li key={comment_id} className='comment'>
-                    <Comment author={author} body={body} created_at={created_at} votes={votes} />
+                    <Comment author={author} body={body} created_at={created_at} votes={votes} comment_id={comment_id} setCommentsList={commentsList} setCommentsList={setCommentsList} />
                     </li>
                 )
             })
