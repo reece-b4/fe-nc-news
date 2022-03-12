@@ -17,7 +17,6 @@ export default ({initialVotes, article_id}) => {
                 setErr('Something went wrong, please try again.')
                 })
     }
-//disable after if hasvoted state is true
     
     return (
         <>
