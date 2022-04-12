@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { useState } from 'react';
 import { UserContext } from './contexts/User.Context';
-import {Header, ArticlesDisplay, Navbar, ArticlePage, ErrorPage} from './components/components.index'
+import {Header, Dropdown, Navbar, ArticlePage, ErrorPage} from './components/components.index'
 
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <Header />
       <Navbar />
     <Routes>
-    <Route path='/' element={<ArticlesDisplay />}/>
-    <Route path='/topic/:topic' element={<ArticlesDisplay />}/>
+    <Route path='/' element={<Dropdown />}/>
+    <Route path='/topic/:topic' element={<Dropdown />}/>
     <Route path='/topic/:topic/article/:article_id' element={<ArticlePage />}/>
     <Route path='*' element={<ErrorPage />}/>
     </Routes>

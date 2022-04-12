@@ -13,11 +13,10 @@ import CommentsList from './CommentsList';
 import Comment from './Comment';
 import ExpandingWrapper from './ExpandingWrapper';
 import PostComment from './PostComment';
-import ArticlesDisplay from './ArticlesDisplay';
 import ErrorPage from './ErrorPage';
 import Error from './Error';
 import DeleteCommentButton from './DeleteCommentButton';
 
-export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper, PostComment, ArticlesDisplay, ErrorPage, Error, DeleteCommentButton};
+export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper, PostComment, ErrorPage, Error, DeleteCommentButton};
 
 

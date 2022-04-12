@@ -1,6 +1,7 @@
 // import Pagenav from "./Pagenav"
 import { useSearchParams, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ArticleCardList from "./ArticleCardList";
 
 export default () => {
     const [searchParams, setSearchParams] = useSearchParams({});
@@ -52,6 +53,7 @@ function setOrderState (e) {
     <input onChange={setOrderState} type="radio" name='orderBy' value='DESC' defaultChecked/>
     <label htmlFor='DESC'>desc</label> */}
     </div>
+    <ArticleCardList order={order} topic={topic} sortBy={sortBy}/>
     </>
     )
 }
