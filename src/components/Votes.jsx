@@ -20,7 +20,7 @@ export default ({initialVotes, article_id}) => {
     
     return (
         <>
-    <p className='votes'>votes: {votes} <button value={'-'} onClick={() => {handleButtonClick(-1)}}>-</button> <button value={'+'} onClick={() => {handleButtonClick(1)}}>+</button></p>
+    <p className='votes'>votes &nbsp;<button className='votesButtons' value={'-'} onClick={() => {handleButtonClick(-1)}}>-</button>&nbsp; {votes} &nbsp;<button className='votesButtons' value={'+'} onClick={() => {handleButtonClick(1)}}>+</button></p>
     { err ? <p>{err}</p> : null}
     </>
     )

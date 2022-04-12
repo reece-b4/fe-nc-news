@@ -18,7 +18,7 @@ export default ({comment_id, setCommentsList}) => {
     
         return (
             <>
-        <button onClick ={deleteComment}>Delete</button>
+        <button id='deleteButton' onClick ={deleteComment}>Delete</button>
         </>
         )
 }

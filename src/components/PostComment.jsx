@@ -33,7 +33,9 @@ function postComment (event) {
     return (
         <>
         <form onSubmit={postComment}>
-        <label>Add a comment: <input type='text' value={comment} onChange={grabInput}></input></label>
+        <label>add a comment (max 500 characters)</label>
+        <textarea value={comment} 
+        maxLength='500' onChange={grabInput}></textarea> 
         <button disabled={buttonDisabled}>Submit</button>
         </form>
         </>

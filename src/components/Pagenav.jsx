@@ -6,7 +6,6 @@ const pageSize = 10;
 
     return (
         <>
-        <p>Pagenav</p>
         <PagenavButtons />
     </>
     )
