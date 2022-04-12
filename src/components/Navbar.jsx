@@ -2,8 +2,7 @@ import NavButtons from "./NavButtons"
 
 export default () => {
     return (
-        <section>
-    <p>Navbar</p>
+        <section id='navbar'>
     <NavButtons />
 </section>
     )

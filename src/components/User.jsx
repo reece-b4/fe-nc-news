@@ -4,5 +4,5 @@ import { useContext } from "react"
 export default () => {
     const {user} = useContext(UserContext)
     
-    return <h1>Logged in as: {user} </h1>
+    return <p id='user'>logged in as<br/> {user} </p>
 }

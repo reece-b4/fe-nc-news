@@ -6,7 +6,7 @@ const toggleExpand = () => setIsExpanded((currIsExpanded)=> !currIsExpanded)
 
     return (
         <section>
-            <button onClick={toggleExpand}>{isExpanded ? 'see less' : 'see more'}</button>
+            <button id='seeMoreButton' onClick={toggleExpand}>{isExpanded ? 'see less' : 'see more'}</button>
             {isExpanded && children}
         </section>
     )

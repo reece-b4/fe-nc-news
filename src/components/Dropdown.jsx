@@ -1,5 +1,4 @@
-import DropdownButtons from "./DropdownButtons"
-import Pagenav from "./Pagenav"
+// import Pagenav from "./Pagenav"
 import { useSearchParams, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -8,6 +7,7 @@ export default () => {
     const [sortBy, setSortBy] = useState('created_at')
     const [order, setOrder] =useState('DESC')
     const {topic} = useParams()
+    const [isSwitchOn, setIsSwitchOn] = useState(true)
 
 useEffect(()=>{
     setSearchParams({sortBy: `${sortBy}`,
@@ -19,13 +19,18 @@ function setSortByState (e) {
 }
 
 function setOrderState (e) {
-    setOrder(e.target.value)
+    setIsSwitchOn(!isSwitchOn);
+    if (isSwitchOn === true) {
+        setOrder('ASC')
+    } else {
+    setOrder('DESC')
     }
+}
 
     return (
     <>
     <div className='dropdown'>
-    <label htmlFor="sortBy">Sort article by: </label>
+    <label htmlFor="sortBy">sort by </label>
     <select name="sortBy" onChange={setSortByState}>
         <option value="created_at">date</option>
         <option value="author">user</option>
@@ -33,14 +38,20 @@ function setOrderState (e) {
         <option value="votes">votes</option>
         <option value="comment_count">comment count</option>
     </select>
-    <input onChange={setOrderState} type="radio" name='orderBy' value='ASC'/>
+
+<label htmlFor='orderSwitch' className='switchLabel'>desc</label>
+    <label className="switch">
+  <input id='orderSwitch' type="checkbox" name='orderBy' onChange={setOrderState}/>
+  <span className="slider round"></span>
+</label>
+<label htmlFor='orderSwitch' className='switchLabel'>asc</label>
+
+    {/* <input onChange={setOrderState} type="radio" name='orderBy' value='ASC'/>
     <label htmlFor='ASC'>asc</label>
 
     <input onChange={setOrderState} type="radio" name='orderBy' value='DESC' defaultChecked/>
-    <label htmlFor='DESC'>desc</label>
+    <label htmlFor='DESC'>desc</label> */}
     </div>
-    <DropdownButtons />
-    <Pagenav/>
     </>
     )
 }

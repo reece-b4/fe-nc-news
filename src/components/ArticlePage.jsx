@@ -30,15 +30,20 @@ export default () => {
     } else {
     const {title, topic, author, body, votes, created_at, comment_count} = article;
 
+    const formattedDate = new Date(created_at).toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute:'2-digit'});
+
     return (
     <>
-    { !!error ? <Error message={error}/> : (<><article>
+    { !!error ? <Error message={error}/> : (<>
+    <article>
     <p className='title'>{title}</p>
-    <p className='author'>{author}</p>
-    <p className='topic'>{topic}</p>
+    <hr/>
+    <p className='articleUsername'>{author}</p>
+    <p className='articleDate'>{formattedDate}</p>
     <p className='body'>{body}</p>
-    <Votes initialVotes={votes} article_id={article_id}/>
-    <p>comments: {comment_count} {created_at}</p>
+    <hr/>
+    <p id='topic'>{topic}</p>
+    <Votes className='votes' initialVotes={votes} article_id={article_id}/>
     </article>
     <PostComment article_id={article_id} setCommentsList={setCommentsList}/>
     <CommentsList article_id={article_id} commentsList={commentsList} setCommentsList={setCommentsList}/></>)}

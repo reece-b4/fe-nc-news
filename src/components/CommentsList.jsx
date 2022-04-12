@@ -17,8 +17,8 @@ if (loading === true) {
 } else {
     return (
         <>
-        <p>Comments</p>
-        <ul>{
+        <h4>Comments: {commentsList.length}</h4>
+        <ul id='commentsList'>{
             commentsList.map(({author, body, created_at, votes, comment_id})=>{
                 return (
                     <li key={comment_id} className='comment'>
