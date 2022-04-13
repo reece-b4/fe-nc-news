@@ -383,6 +383,7 @@ button {
   color: white;
   position:fixed;
   opacity: 95%;
+  margin-top: -150px;
   margin-left: -6vh;
   margin-right: 50vh;
   padding: 10px;
