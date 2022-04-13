@@ -124,11 +124,19 @@ form textarea {
 }
 
 form button {
-  grid-area: 3;
+  float: left;
+  display: inline;
   width: 5em;
-  justify-self: center;
-  margin: 2px;
+  margin: 2px 12px;
   padding-top: 2px;
+}
+
+#emptyCommentError {
+  float: right;
+  display: inline;
+  font-size: 1em;
+  color: red;
+  margin: 0px 15px 0px 0px;
 }
 
 
@@ -255,9 +263,10 @@ input:checked + .slider:before {
     border-color: #6cbd4b;
   }
 
-  form textarea {
+  form {
     width: 50%;
-    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   article {
@@ -303,8 +312,6 @@ article {
 
 .votesButtons {
   border: 0.1em solid;
-  border-color: black;
-  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   color: #030303;
 }
@@ -370,4 +377,43 @@ button {
 #commentDate {
   float: right;
   margin: 5px;
+}
+
+#popupText {
+  color: white;
+  position:fixed;
+  opacity: 95%;
+  margin-left: -6vh;
+  margin-right: 50vh;
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: rgb(43, 39, 39);
+  border-radius: 15px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+#popupText.fade {
+animation: fadeOut 1s;
+animation-delay: fadeOut 3s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 95%;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:95% ;}
+}
+
+@-webkit-keyframes fadeOut {
+  from {opacity: 95%;}
+  to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 95%;}
+  to {opacity:0 ;}
 }
