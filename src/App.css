@@ -245,40 +245,6 @@ input:checked + .slider:before {
 .votes {
   font-size: 1rem;
 }
-@media screen and (min-width: 600px) {
-  .votes {
-    font-size: 1rem;
-  }
-
-  .votesButtons:hover {
-    color: #fbfafa;
-    background-color: #6cbd4b;
-    border-color: black;
-  }
-
-  button:hover {
-    color: #fbfafa;
-    background-color: #6cbd4b;
-    border-color: #6cbd4b;
-  }
-
-  form {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  article {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 0px;
-    width: 50%;
-  }
-
-  li {
-    list-style: none;
-  }
-}
 
 article {
   border-color: rgb(134, 189, 207);
@@ -309,7 +275,7 @@ article {
 
 .votesButtons {
   border: 0.1em solid;
-  border-radius: 50%;
+  border-radius: 20%;
   color: #030303;
 }
 
@@ -420,8 +386,9 @@ animation-delay: fadeOut 3s;
   color: white;
   position:fixed;
   opacity: 95%;
-  margin-left: -13px;
-  margin-top: 50px;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px;
   font-size: 1.5em;
   background-color: rgb(43, 39, 39);
@@ -434,17 +401,63 @@ animation-delay: fadeOut 3s;
   animation: fadeOut 1s;
   animation-delay: fadeOut 3s;
   }
-
-#offlineError {
-  color: white;
-  position:fixed;
+  
+  #offlineError {
+    color: white;
+    position:fixed;
   opacity: 95%;
-  margin-left: -13px;
-  margin-top: 50px;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px;
   font-size: 1.5em;
   background-color: rgb(43, 39, 39);
   border-radius: 15px;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
+}
+
+@media screen and (min-width: 600px) {
+  .votes {
+    font-size: 1rem;
+  }
+
+  .votesButtons:hover {
+    color: #fbfafa;
+    background-color: #6cbd4b;
+    border-color: black;
+  }
+
+  button:hover {
+    color: #fbfafa;
+    background-color: #6cbd4b;
+    border-color: #6cbd4b;
+  }
+
+  form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  article {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0px;
+    width: 50%;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  #votesError {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #offlineError {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
