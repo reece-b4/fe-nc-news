@@ -418,3 +418,36 @@ animation-delay: fadeOut 3s;
   from {opacity: 95%;}
   to {opacity:0 ;}
 }
+
+#votesError {
+  color: white;
+  position:fixed;
+  opacity: 95%;
+  margin-left: -13px;
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: rgb(43, 39, 39);
+  border-radius: 15px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+#votesError.fade {
+  animation: fadeOut 1s;
+  animation-delay: fadeOut 3s;
+  }
+
+#offlineError {
+  color: white;
+  position:fixed;
+  opacity: 95%;
+  margin-left: -13px;
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: rgb(43, 39, 39);
+  border-radius: 15px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
