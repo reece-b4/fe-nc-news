@@ -1,7 +1,6 @@
 import Header from './Header'
 import User from './User'
 import Navbar from './Navbar';
-import Pagenav from './Pagenav';
 import NavButtons from './NavButtons';
 import PagenavButtons from './PagenavButtons';
 import Dropdown from './Dropdown';
@@ -17,6 +16,6 @@ import ErrorPage from './ErrorPage';
 import Error from './Error';
 import DeleteCommentButton from './DeleteCommentButton';
 
-export {Header, User, Navbar, Pagenav, NavButtons, PagenavButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper, PostComment, ErrorPage, Error, DeleteCommentButton};
+export {Header, User, Navbar, NavButtons, PagenavButtons, Dropdown, ArticleCardList, ArticleCard, ArticlePage, Votes, CommentsList, Comment, ExpandingWrapper, PostComment, ErrorPage, Error, DeleteCommentButton};
 
 

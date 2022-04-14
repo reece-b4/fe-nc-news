@@ -1,4 +1,3 @@
-// import Pagenav from "./Pagenav"
 import { useSearchParams, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ArticleCardList from "./ArticleCardList";
@@ -46,12 +45,6 @@ function setOrderState (e) {
   <span className="slider round"></span>
 </label>
 <label htmlFor='orderSwitch' className='switchLabel'>asc</label>
-
-    {/* <input onChange={setOrderState} type="radio" name='orderBy' value='ASC'/>
-    <label htmlFor='ASC'>asc</label>
-
-    <input onChange={setOrderState} type="radio" name='orderBy' value='DESC' defaultChecked/>
-    <label htmlFor='DESC'>desc</label> */}
     </div>
     <ArticleCardList order={order} topic={topic} sortBy={sortBy}/>
     </>

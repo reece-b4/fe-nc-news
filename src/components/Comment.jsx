@@ -15,8 +15,6 @@ export default ({author, body, created_at, comment_id, commentsList, setComments
     
     <ExpandingWrapper>
         <div id='expandingWrapperDiv'>
-    {/* <Votes initialVotes={votes} article_id={article_id}/> */}
-    {/* votes component is for article votes, backend doesn't support patch votes for comment votes? */}
     <p id='commentUsername' >{author}</p><p id='commentDate'>{formattedDate}</p>
     </div>
     </ExpandingWrapper>
