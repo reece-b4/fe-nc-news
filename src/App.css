@@ -7,6 +7,7 @@
   display: grid;
   align-items: center;
   grid-template-columns: repeat(7, 1fr);
+  background-color: rgb(134, 189, 207);
 }
 #headerDiv {
   grid-area: 1 / 1 / 1 / 8;
@@ -30,19 +31,22 @@
   font-size: 0.8em;
 }
 
+#navbarSection {
+  background-color: rgb(134, 189, 207);
+  border-bottom: 1px solid;
+}
+
 #navbar {
-  grid-area: 2 / 1 / 2 / 7;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
 }
 
 .navButtons {
-  border-bottom: 1px solid;
   height: 1.6rem;
   margin-left: -1px;
   margin-top: -1px;
-  background-color: rgb(134, 189, 207);
+  /* background-color: rgb(134, 189, 207); */
   color: black;
   text-decoration: none;
 }
@@ -418,6 +422,14 @@ animation-delay: fadeOut 3s;
 }
 
 @media screen and (min-width: 600px) {
+
+  #navbar, .articleList, #commentsList{
+    width: 50%;
+    /* align-self: center; */
+    margin:auto;
+  }
+
+
   .votes {
     font-size: 1rem;
   }
