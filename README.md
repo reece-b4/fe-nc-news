@@ -56,10 +56,6 @@ In required directory:
 npm install
 ```
 
-## Dependency list
-
-react, react-dom, react-router-dom, react scripts, axios, web-vitals  <br>
-
 ## Author
 
 👤 **ReeceBalfour**
