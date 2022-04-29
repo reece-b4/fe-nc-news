@@ -36,11 +36,13 @@ Consideration for UX has been made through the use of loading display, simple de
 Minimum version of Node: v16.13.2 <br>
 Minimum version of React: 17.0.2 <P>
 
-### 🏠 [Homepage](https://reecebalfourncnews.netlify.app)
-### 🖥️ [Git Repo](https://github.com/reece-b4/fe-nc-news)
+## Links
 
-### 🏠 [Back-end Homepage](https://reece-ncnews.herokuapp.com)
-### 🖥️ [Back-end Repo](https://github.com/reece-b4/NC-News-public) 
+## 🏠 [Homepage](https://reecebalfourncnews.netlify.app)
+## 🖥️ [Git Repo](https://github.com/reece-b4/fe-nc-news)
+
+## 🏠 [Back-end Homepage](https://reece-ncnews.herokuapp.com)
+## 🖥️ [Back-end Repo](https://github.com/reece-b4/NC-News-public) 
  <br>
 
 ## Cloning repo (link above)
